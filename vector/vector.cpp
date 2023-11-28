@@ -108,3 +108,21 @@ double vector::operator !() {
     }
     return sqrt(tmp);
 }
+std::istream & operator >>(std::istream &inp, vector &v) {
+    std::cout << "dim: ";
+    inp >> v.dim;
+    delete [] v.x;
+    v.x = new double[v.dim];
+    for(int i = 0; i <= v.dim-1; i++) {
+        inp >> v.x[i];
+    }
+    return inp;
+}
+std::ostream & operator <<(std::ostream &out, const vector &v) {
+    out << "(";
+    for(int i = 0; i <= v.dim-2; i++) {
+        out << v.x[i] << ", ";
+    }
+    out << v.x[v.dim-1] << ")\n";
+    return out;
+}

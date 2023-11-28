@@ -46,14 +46,18 @@ int main() {
     // if(u == v) std::cout << "u = v" << std::endl;
     // if(u != v) std::cout << "u != v" << std::endl;
     // std::cout << "Do dai cua u: " << !u;
-    vector u(2);
-    std::cout << "u: ";
-    u.input();
-    std::cout << "u: ";
-    u.show();
+    // vector u(2);
+    // std::cout << "u: ";
+    // u.input();
+    // std::cout << "u: ";
+    // u.show();
+    // vector v;
+    // v=u;
+    // std::cout << "v: ";
+    // v.show();
+    vector u;
     vector v;
-    v=u;
-    std::cout << "v: ";
-    v.show();
+    std::cin >> u >> v;
+    std::cout << u << v;
     return 0;
 }
